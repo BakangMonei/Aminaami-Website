@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="../css/styles.css" rel="stylesheet" />
+    <!-- Enable first-party plugins, like forms and typography, using the plugins query parameter. -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+    <script src="../../js/tailwind.config.js"></script>
+    <title>Register</title>
+</head>
+
+<body class="flex items-center justify-center h-screen bg-gray-100">
+    <div class="bg-white p-8 rounded shadow-md w-96 flex flex-col items-center">
+        <!-- <h2 class="text-2xl font-semibold mb-3 text-center">Login</h2> -->
+        <div class="text-2xl font-semibold mb-3 text-center">
+            <img src="../../images/logo_aminaami.png" alt="Logo">
+        </div>
+        <h2 class="text-2xl font-semibold text-gray-600 mb-3 text-center">Create An Account. It's FREE</h2>
+        <form id="loginForm" class="w-full">
+            <div class="mb-2 w-full">
+                <!-- <label for="email" class="block text-gray-700 text-sm font-bold mb-1">Email</label> -->
+                <input type="email" id="email" placeholder="Email" name="email"
+                    class="w-full px-3 py-2 border rounded shadow appearance-none mb-2" required />
+            </div>
+
+            <div class="mb-2 w-full">
+                <!-- <label for="email" class="block text-gray-700 text-sm font-bold mb-1">Email</label> -->
+                <input type="text" id="firstname" placeholder="firstname" name="firstname"
+                    class="w-full px-3 py-2 border rounded shadow appearance-none mb-2" required />
+            </div>
+            <div class="mb-2 w-full">
+                <!-- <label for="email" class="block text-gray-700 text-sm font-bold mb-1">Email</label> -->
+                <input type="text" id="lastname" placeholder="lastname" name="lastname"
+                    class="w-full px-3 py-2 border rounded shadow appearance-none mb-2" required />
+            </div>
+            <div class="mb-2 w-full">
+                <!-- <label for="password" class="block text-gray-700 text-sm font-bold mb-1">Password</label> -->
+                <input type="password" placeholder="Password" id="password" name="password"
+                    class="w-full px-3 py-2 border rounded shadow appearance-none mb-2" required />
+            </div>
+
+            <div class="mb-2 w-full">
+                <!-- <label for="email" class="block text-gray-700 text-sm font-bold mb-1">Email</label> -->
+                <input type="text" id="phone" placeholder="Phone Number" name="phone"
+                    class="w-full px-3 py-2 border rounded shadow appearance-none mb-2" required />
+            </div>
+
+            <div class="flex flex-auto ">
+                <input type="checkbox" id="terms" name="terms" value="terms" class="p-2 px-2 py-2 space-x-6 border border-black" required>
+                <label for="terms" class="block text-gray-700 text-sm font-bold mb-2 justify-center"> I agree to the
+                    terms and conditions</label>
+            </div>
+            <div class="justify-end flex flex-auto">
+                <button type="submit"
+                    class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800 ">
+                    Register
+                </button>
+            </div>
+        </form>
+
+
+        <!-- <div class="w-full text-center mt-4 justify-between">
+            <p>Already have an account?</p> <p class="text-red-500 font-bold">Sign In here</p>
+        </div> -->
+
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="../../Firebase/firebase.js"></script>
+    <script src="../../js/scripts.js"></script>
+
+    <script>
+        function previewImage(input) {
+            const preview = document.getElementById('avatar-preview');
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    preview.src = e.target.result;
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+</body>
+
+</html>
