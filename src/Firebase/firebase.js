@@ -6,7 +6,6 @@ import { getStorage } from "firebase/storage";
 import { getAuth } from "firebase/auth";
 import { getDatabase } from "firebase/database";
 import { getMessaging } from "firebase/messaging";
-import { signInWithEmailAndPassword } from "firebase/auth";
 import { cloudMessaging } from './cloudMessaging.js';
 
 import { handleLogin } from './auth.js';
@@ -21,8 +20,6 @@ const firebaseConfig = {
   appId: "1:820820317427:web:730d8ace04ab6798201386",
   measurementId: "G-QMVZSGZRS8"
 };
-
-
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
