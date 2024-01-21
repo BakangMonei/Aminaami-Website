@@ -14,7 +14,6 @@ loginForm.addEventListener('submit', function (event) {
       // Signed in
       const user = userCredential.user;
       console.log('Successfully logged in:', user);
-
       // Redirect to MainDashboard.html or perform other actions
       window.location.href = 'MainDashboard.html';
     })
